@@ -1,0 +1,34 @@
+{
+  "name": "init",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Vue3 + vite + Ts + vant3  ",
+  "author": "高先生的猫 <53365381@qq.com>",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "vant": "^3.4.9",
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.15",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.33",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "lib-flexible": "^0.3.2",
+    "postcss-pxtorem": "^6.0.0",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.9",
+    "sass": "^1.49.9",
+    "vite-plugin-style-import": "^1.4.1",
+    "vue-tsc": "^0.34.7"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
