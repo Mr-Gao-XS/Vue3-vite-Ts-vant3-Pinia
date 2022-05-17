@@ -11,3 +11,11 @@ cnpm install
 ```
 npm run dev
 ```
+
+```
+需要
+node > 12.0
+vue/vli > 4.5 ( 升级最新 npm update -g @vue/cli )
+vite >= 2.0 ( 安装最新 npm init vite@latest )
+typescripy > 4.0 (  npm install typescript -g )
+```
