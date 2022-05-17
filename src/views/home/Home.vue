@@ -55,7 +55,7 @@ const { list } = useShowList()
 }
 .cell {
   padding: 5px;
-  ::v-deep .van-cell__title {
+  :deep(.van-cell__title) {
     span {
       font-size: 12px;
       color: #666;

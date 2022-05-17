@@ -41,7 +41,7 @@ const onChange = (value) => {
 </template>
 
 <style lang="scss" scoped>
-::v-deep.layout-tabbar {
+:deep(.layout-tabbar) {
   position: relative;
 }
 </style>
