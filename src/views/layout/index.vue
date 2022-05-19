@@ -1,29 +1,31 @@
 <script setup lang="ts">
 import { ref, reactive, toRefs } from 'vue'
-
+import { routes } from '@/router'
 //底部tab栏相关
-const useTabBar = () => {
-  const state = reactive({
-    tabBar: [
-      {
-        title: '首页',
-        to: {
-          name: 'home',
-        },
-        icon: 'home-o',
-      },
-      {
-        title: '我的',
-        to: {
-          name: 'mine',
-        },
-        icon: 'user-o',
-      },
-    ],
-  })
-  return toRefs(state)
-}
-const { tabBar } = useTabBar()
+// const useTabBar = () => {
+//   const state = reactive({
+//     tabBar: [
+//       {
+//         title: '首页',
+//         to: {
+//           name: 'home',
+//         },
+//         icon: 'home-o',
+//       },
+//       {
+//         title: '我的',
+//         to: {
+//           name: 'mine',
+//         },
+//         icon: 'user-o',
+//       },
+//     ],
+//   })
+//   return toRefs(state)
+// }
+// const { tabBar } = useTabBar()
+
+const tabBar = routes[0].children.filter((x) => x.path)
 
 const handleChange = (value) => {
   // console.log(value,'valueeeeeee');
@@ -39,7 +41,7 @@ const handleChange = (value) => {
       <router-view v-else></router-view>
     </div>
     <div class="layout-footer">
-      <TabBar :data="tabBar" @chang="handleChange"></TabBar>
+      <TabBar :tabBar="tabBar" @chang="handleChange"></TabBar>
     </div>
   </div>
 </template>

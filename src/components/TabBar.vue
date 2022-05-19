@@ -5,21 +5,10 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { reactive, ref } from 'vue'
+import { reactive, ref, toRefs } from 'vue'
 
-interface tabProps {
-  data?: [
-    {
-      title: string
-      to: string
-      name: string
-      icon: string
-    }
-  ]
-}
-
-const props = defineProps<tabProps>()
-console.log(props.data, 'props.data')
+const props = defineProps(['tabBar'])
+console.log(props.tabBar)
 
 const emit = defineEmits(['chang'])
 
@@ -35,7 +24,7 @@ const onChange = (value) => {
 <template>
   <div>
     <van-tabbar class="layout-tabbar" fixed route v-model="active" @change="onChange">
-      <van-tabbar-item v-for="(item, index) in props.data" :to="item.to" :name="item.name" :key="index" :icon="item.icon">{{ item.title }}</van-tabbar-item>
+      <van-tabbar-item v-for="(item, index) in props.tabBar" :to="item.path" :name="item.meta.title" :key="index" :icon="item.meta.icon">{{ item.meta.title }}</van-tabbar-item>
     </van-tabbar>
   </div>
 </template>

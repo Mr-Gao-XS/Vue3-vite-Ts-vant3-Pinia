@@ -47,10 +47,10 @@ export default defineConfig({
     }
   },
   server: {
-    port: 8888,
+    port: 10086, // 本地dev启动端口
+    open: true, // 启动后浏览器默认打开
     proxy: {
       '/api': {
-        // 免费的在线REST API
         target: 'http://jsonplaceholder.typicode.com',
         // 把origin修改成目标地址
         // 把localhost:8888 修改成http://jsonplaceholder.typicode.com
