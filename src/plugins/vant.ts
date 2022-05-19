@@ -13,3 +13,4 @@ export default {
     app.component(List.name, List)
   }
 }
+

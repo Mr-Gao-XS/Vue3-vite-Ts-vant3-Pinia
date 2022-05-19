@@ -1,11 +1,12 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 
 
 // 路由规则
-const routes = [
+const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     component: () => import('@/views/layout/index.vue'),
+    redirect: '/home',
     children: [
       { path: '', redirect: '/home' },
       {

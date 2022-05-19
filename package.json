@@ -7,6 +7,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
+    "build:dev": "vue-tsc --noEmit && vite build --mode development",
+    "build:test": "vue-tsc --noEmit && vite build --mode test",
+    "build:pre": "vue-tsc --noEmit && vite build --mode pre",
+    "build:prod": "vue-tsc --noEmit && vite build --mode production",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -21,9 +25,10 @@
     "@vitejs/plugin-vue": "^2.3.3",
     "lib-flexible": "^0.3.2",
     "postcss-pxtorem": "^6.0.0",
+    "sass": "^1.49.9",
     "typescript": "^4.5.4",
     "vite": "^2.9.9",
-    "sass": "^1.49.9",
+    "vite-plugin-compression": "^0.5.1",
     "vite-plugin-style-import": "^1.4.1",
     "vue-tsc": "^0.34.7"
   },

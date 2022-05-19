@@ -1,6 +1,9 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
+// 开启 gzip
+import viteCompression from 'vite-plugin-compression';
+
 // 如果提示path模块找不到 cnpm i @types/node --save-dev 
 import { resolve } from 'path'
 
@@ -19,6 +22,7 @@ export default defineConfig({
     }
   },
   plugins: [
+    viteCompression(),
     vue(),
     styleImport({
       resolves: [VantResolve()],
