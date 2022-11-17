@@ -17,4 +17,8 @@ import components from './plugins/components.js';
 
 
 
-createApp(App).use(router).use(store).use(vant).use(components).mount('#app')
+createApp(App).use(router)
+  .use(store)
+  .use(vant)
+  .use(components)
+  .mount('#app')

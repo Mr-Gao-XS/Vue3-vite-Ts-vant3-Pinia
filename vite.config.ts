@@ -30,7 +30,7 @@ export default defineConfig({
         {
           libraryName: 'vant',
           esModule: true,
-          resolveStyle: name => `../vant/es/${name}/style` // vant按需引入有兼容问题
+          resolveStyle: name => `../es/${name}/style` // vant按需引入有兼容问题
         }
       ]
     })
