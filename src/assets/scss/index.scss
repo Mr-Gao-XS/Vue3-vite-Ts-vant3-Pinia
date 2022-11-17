@@ -1,6 +1,9 @@
 @import './reset.scss';
 @import './mixin.scss';
 @import './variables.scss';
+body {
+  background: #f2f2f2;
+}
 #app {
   color: #333333;
   font-family: Arial, Helvetica, 'Microsoft YaHei', sans-serif;
