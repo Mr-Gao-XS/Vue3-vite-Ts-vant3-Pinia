@@ -1,10 +1,9 @@
 <template>
   <div class="title">
-    <img class="img" src="~@/assets/img/logo.jpg" alt="" />
-    <span class="txt">高先生的猫</span>
+    <img class="img" src="~@/assets/img/logo.jpg" @click="changeName" alt="" />
+    <span class="txt">{{ name }}</span>
     <span class="txt">Vue3 + vite + Ts + vant3 + pinia</span>
   </div>
-
   <van-list finished-text="没有更多了">
     <van-cell class="cell" v-for="(item, index) in list" :key="index" :title="item.title" icon="success" />
   </van-list>
@@ -14,13 +13,13 @@
 import { computed, reactive, ref, toRefs } from 'vue'
 import { piniaStore } from '@/store/index'
 import logo from '@/assets/img/logo.jpg'
+import { relative } from 'path/posix'
 let store = piniaStore()
-
 store.name = '田永正'
-console.log(store.name)
 
 const useShowList = () => {
   const state = reactive({
+    name: '高先生的猫',
     list: [
       { title: 'vite 3.2' },
       { title: 'rem移动端适配' },
@@ -40,7 +39,7 @@ const useShowList = () => {
   })
   return toRefs(state)
 }
-const { list } = useShowList()
+let { list, name } = useShowList()
 </script>
 
 <style lang="scss" scoped>
