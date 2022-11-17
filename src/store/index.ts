@@ -1,7 +1,5 @@
 // import { createStore } from "vuex";
-import { defineStore } from 'pinia';
-import { createPinia } from "pinia"
-
+import { defineStore, createPinia } from 'pinia';
 
 // vuex 和 pinia 二选一  强烈推荐pinia 语法十分简单
 

@@ -33,7 +33,7 @@ class HttpRequest {
         .filter((item: any) => item.url == response.config.url && item.method == response.config.method)
         .forEach((item: any) => (item.isLoading = false));
       //所有请求都加载完才让加载提示消失
-      if (requestList.every((item: any) => !item.isLoading)) store.commit("changeIsLoading", false);
+      // if (requestList.every((item: any) => !item.isLoading)) store.commit("changeIsLoading", false);
     };
     instance.interceptors.response.use(
       response => {
@@ -42,7 +42,7 @@ class HttpRequest {
       },
       error => {
         if (error.response.status == 301) {
-          store.commit("changeLoginModalVisible", true);
+          // store.commit("changeLoginModalVisible", true);
         }
         setLoadingToFalse(error);
         return Promise.reject(error.response?.data);
