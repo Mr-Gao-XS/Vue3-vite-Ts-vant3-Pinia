@@ -1,4 +1,4 @@
-import { Button, Field, Image, Tabbar, TabbarItem, Cell, CellGroup, List } from 'vant'
+import { Button, Field, Image, Tabbar, TabbarItem, Cell, CellGroup, List, Toast } from 'vant'
 import { App } from 'vue'
 
 export default {
@@ -11,6 +11,7 @@ export default {
     app.component(Cell.name, Cell)
     app.component(CellGroup.name, CellGroup)
     app.component(List.name, List)
+    app.component(Toast.name, Toast)
   }
 }
 

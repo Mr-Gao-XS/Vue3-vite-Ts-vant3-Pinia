@@ -1,0 +1,28 @@
+// import { createStore } from "vuex";
+// vuex 和 pinia 二选一  强烈推荐pinia 语法十分简单
+
+// vuex 版本
+// export const vuexStore = createStore({
+//   state: {
+//     isLoading: false,
+//     userName: ""
+//   },
+//   getters: {
+
+//   },
+//   mutations: {
+//     changeIsLoading(state, val) {
+//       state.isLoading = val;
+//     },
+
+//     getUserNmae(state, data) {
+//       state.userName = data
+//     }
+
+//   },
+//   actions: {
+
+//   },
+//   modules: {},
+// });
+// export default vuexStore;

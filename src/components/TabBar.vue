@@ -6,9 +6,7 @@ export default {
 
 <script setup lang="ts">
 import { reactive, ref, toRefs } from 'vue'
-
 const props = defineProps(['tabBar'])
-console.log(props.tabBar)
 
 const emit = defineEmits(['chang'])
 

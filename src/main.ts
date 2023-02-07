@@ -15,9 +15,13 @@ import vant from '@/plugins/vant'
 //全局公共组件
 import components from './plugins/components.js';
 
+// vant toast
+import { Toast } from 'vant'
 
+const app = createApp(App)
+app.config.globalProperties.$toast = Toast
 
-createApp(App).use(router)
+app.use(router)
   .use(store)
   .use(vant)
   .use(components)
