@@ -25,7 +25,7 @@ const useShowList = () => {
       { title: 'rem移动端适配' },
       { title: 'VantUI 组件按需加载 3.6.5' },
       { title: 'Sass 全局样式' },
-      { title: 'Vuex / Pinia 状态管理' },
+      { title: 'Pinia 状态管理' },
       { title: 'Axios 封装及接口管理' },
       { title: 'lodash函数库、dayjs时间库 ' },
       { title: 'Vue-router' },

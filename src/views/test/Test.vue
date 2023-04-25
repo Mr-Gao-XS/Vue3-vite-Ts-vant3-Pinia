@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <div class="box">vant 组件测试</div>
     <van-cell-group inset>
       <van-field v-model="submitInfo.name" label="姓名" placeholder="请输入姓名" />
       <van-field v-model="submitInfo.age" label="年龄" placeholder="请输入年龄" />
@@ -35,7 +36,7 @@ setTimeout(() => {
     address: '3',
     company: '4',
   }
-}, 1000)
+}, 0)
 
 /* methods */
 const showToast = () => {
@@ -48,6 +49,11 @@ const showToast = () => {
 <style lang="scss" scoped>
 .container {
   padding-top: 20px;
+}
+.box {
+  text-align: center;
+  font-size: 20px;
+  padding-bottom: 10px;
 }
 .btn {
   margin-top: 20px;
